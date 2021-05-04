@@ -2,7 +2,7 @@ from flask import Flask,render_template, request, flash, redirect, url_for, send
 import sys
 from FuncMile36 import return_csv
 
-app = Flask("Mile6")
+app = Flask("mile6git")
 
 @app.route('/test')
 def hello_world():
