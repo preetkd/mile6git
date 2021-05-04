@@ -4,7 +4,6 @@ chardet==3.0.4
 conda==4.3.16
 cryptography==2.9.2
 idna==2.9
-menuinst==1.4.16
 pycosat==0.6.3
 pycparser==2.20
 pyOpenSSL==19.1.0
