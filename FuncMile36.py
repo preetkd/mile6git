@@ -28,10 +28,10 @@ def FileDwnLdFun(path):
 def return_csv(path):
     upath = FileDwnLdFun(path=path)
 
-    testDF = pd.read_csv('C:/Users/Harpreet/Desktop/CAPSTONE/mile6git/Testing.csv')
+    testDF = pd.read_csv('Testing.csv')
 
     # CustomerList
-    custDF = pd.read_csv("C:/Users/Harpreet/Desktop/CAPSTONE/mile6git/liveCustomerList.csv")
+    custDF = pd.read_csv("liveCustomerList.csv")
 
     # custDUp = custDF.apply(lambda x: x.astype(str).str.upper()) DONT NEED UPPERCASE
 
@@ -40,7 +40,7 @@ def return_csv(path):
 
     # BankLogin Check
 
-    BankLogin = pd.read_csv("C:/Users/Harpreet/Desktop/CAPSTONE/mile6git/liveBankAcct.csv")
+    BankLogin = pd.read_csv("liveBankAcct.csv")
 
     FraudCust1 = pd.merge(testCust, BankLogin, on=['firstName', 'lastName'], how='left')
     WrngLogin = FraudCust1.drop(columns=['firstName', 'lastName'])
