@@ -31,15 +31,12 @@ def getPlotCSV(ofile):
     outfile = str(ofile) +".csv"
     with open(outfile) as fp:  #outputs/Adjacency.csv
         csv = fp.read()
-    return render_template('excel.html', inp_url = " ", csv = outfile)
+    return render_template('excel.html', inp_url = " ", csv = ofile )
 
 
 @app.route("/<int:ofile>/downloadCSV")
 def downloadCSV(ofile):
-    outfile = str(ofile) + ".csv"
-    # with open("outputs/Adjacency.csv") as fp:
-    #     csv = fp.read()
-    # return render_template('excel.html', inp_url = "this is test", csv = "Mile3/363500.csv")
+    outfile = str(ofile)+ ".csv"
     return send_file(outfile,
                      mimetype='text/csv',
                      attachment_filename=outfile,

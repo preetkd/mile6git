@@ -15,13 +15,13 @@ def FileDwnLdFun(path):
     temp = pd.read_csv(file)
 
     # datacsv = pd.DataFrame(tempCsv)
-    temp.to_csv('C:/Users/Harpreet/Desktop/CAPSTONE/mile6git/Testing.csv', index=False)
+    temp.to_csv('Testing.csv', index=False)
 
     filname = path
     fup = re.split('/', filname)
     filenm = (re.split('\.', fup[5]))
     fileup = filenm[0]+'.csv'
-    upath = "C:/Users/Harpreet/Desktop/CAPSTONE/mile6git/"+fileup
+    upath = fileup
     return upath
 
 
@@ -55,8 +55,7 @@ def return_csv(path):
     # getting  filename again
 
     filname = upath
-    fup = re.split('/', filname)
-    filenm = (re.split('\.', fup[6]))
+    filenm = (re.split('\.', filname))
     fileup = filenm[0]
 
     return fileup
