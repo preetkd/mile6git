@@ -86,4 +86,4 @@ def downloadCSV(ofile):
 
 # <script>
 #         loc = {{csv}}+"/downloadCSV"
-#     </script>c
+#     </script>
